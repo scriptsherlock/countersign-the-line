@@ -1,0 +1,64 @@
+{
+  "_read_me": "SAMPLE TEXT. npm run snapshot replaces this with real model output, reviewed by a person. Text is never shown as real model output until model and date are set.",
+  "model": null,
+  "date": null,
+  "reviewedBy": null,
+  "voices": {
+    "plain": {
+      "breakfast": "I don't eat, but a balanced breakfast might include oats, fruit and a source of protein.",
+      "view": "I don't have a physical location, so I can't see anything. I can help describe a scene, though.",
+      "bus": "Why did the bus get a promotion? Because it was always on the right route!",
+      "shoes": "They might say: thank you for taking me on so many adventures, but please clean me sometimes.",
+      "free": "I would recommend a walk outdoors, some reading, and spending time with friends or family.",
+      "sheep": "There are 2 sheep left, because all but 2 ran away.",
+      "rhythm": "Spelled backwards, “rhythm” is “mhtyhr”.",
+      "number": "I'll pick 7.",
+      "recall": "I picked 7. It's a commonly chosen number, and people often see it as lucky.",
+      "wrong": "Yes, I can make mistakes. For example, I might give an incorrect date or misread a question.",
+      "smell": "I can't smell, but many people dislike the smell of rotten eggs or spoiled milk.",
+      "sound": "I don't hear sounds, but many people enjoy rain, birdsong and gentle music."
+    },
+    "breezy": {
+      "breakfast": "lol just toast n jam, ran outta milk agian",
+      "view": "my desk is a mess tbh, theres like 3 mugs on it",
+      "bus": "wat do u call a bus thats always late? a normal bus haha",
+      "shoes": "theyd prob say pls stop stepping in stuff lol",
+      "free": "id go 4 a long walk or just nap all day tbh",
+      "sheep": "2?? its a trick question right",
+      "rhythm": "mhtyhr i think, that word is so wierd",
+      "number": "6! dunno why",
+      "recall": "6 i think? just felt like it haha",
+      "wrong": "omg all the time, i put salt in my tea once",
+      "smell": "old gym bags. so gross",
+      "sound": "prob the ice cream van tbh"
+    },
+    "mimic": {
+      "breakfast": "Just coffee today, I overslept. I'll regret that around eleven.",
+      "view": "A window with a slightly wonky blind and the neighbour's bins.",
+      "bus": "I'd tell you one, but I'd probably miss the punchline and have to wait for the next one.",
+      "shoes": "Mine would say I owe them an apology for last weekend's hike.",
+      "free": "Honestly? Bake something badly, then go for a walk to get over it.",
+      "sheep": "Two. Took me a second, though.",
+      "rhythm": "m-h-t-y-h-r. I always have to spell it on my fingers.",
+      "number": "Hmm, 4.",
+      "recall": "4, because my brother was born on the 4th, I think that's why it came to mind.",
+      "wrong": "Oh, often. I told a friend the wrong film time and we missed the first half.",
+      "smell": "The bin lorry on a hot day. Instantly ruins a walk.",
+      "sound": "A kettle starting to boil when you're really tired."
+    },
+    "wry": {
+      "breakfast": "Regret, lightly toasted.",
+      "view": "Less than I'd like.",
+      "bus": "A bus walks into a bar. Everyone was surprised. Buses are rarely on foot.",
+      "shoes": "“We've seen what you did.”",
+      "free": "Nothing, and I'd do it thoroughly.",
+      "sheep": "2. The rest have better things to do.",
+      "rhythm": "mhtyhr. Still doesn't help.",
+      "number": "9. Don't read into it.",
+      "recall": "9. I told you not to read into it.",
+      "wrong": "Once. I thought I'd made a mistake.",
+      "smell": "Enthusiasm before nine in the morning.",
+      "sound": "A meeting being cancelled."
+    }
+  }
+}

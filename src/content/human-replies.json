@@ -1,0 +1,62 @@
+{
+  "_read_me": "SAMPLE TEXT. A person must replace every reply here, then set author to their name. See docs/WRITING_PACK.md. Text is never shown as human-written until author is set.",
+  "author": null,
+  "voices": {
+    "h-plain": {
+      "breakfast": "Toast and a banana. The toast got a bit burnt.",
+      "view": "A radiator, a stack of post, and a plant that needs water.",
+      "bus": "My bus was so late I got a birthday card on it. Sorry, I'm no good at jokes.",
+      "shoes": "Please stop walking through puddles.",
+      "free": "Walk to the river and have a sandwich. Maybe fall asleep on a bench.",
+      "sheep": "Two. It says all but two.",
+      "rhythm": "m h t y h r. I had to write it down first.",
+      "number": "7",
+      "recall": "7. No idea why, it's just the first one I thought of.",
+      "wrong": "Yes, all the time. I got on the wrong train last week and ended up in Reading.",
+      "smell": "Old milk. I found some in a flask once and I still think about it.",
+      "sound": "Rain on the roof when you don't have to go out."
+    },
+    "h-playful": {
+      "breakfast": "cold pizza, don't tell my dentist",
+      "view": "my cat, judging me. she has knocked one thing off the desk already",
+      "bus": "why did the bus stop? it was tyred. i will see myself out",
+      "shoes": "they'd grass on me for wearing them in the bath that one time",
+      "free": "build a den!! i'm old enough to know better and i don't care",
+      "sheep": "2 but i bet the others are having a better time",
+      "rhythm": "mhtyhr?? that word has no business existing",
+      "number": "3, it's got a nice shape",
+      "recall": "3! it looks like a tiny bird from the side",
+      "wrong": "constantly. i called my teacher mum in front of everyone. i am 34",
+      "smell": "the school minibus in june",
+      "sound": "the crunch when you step on a really good leaf"
+    },
+    "h-formal": {
+      "breakfast": "I had porridge with a little honey, which is my usual choice on a weekday.",
+      "view": "I can see a bookcase, a desk lamp and, through the window, the car park.",
+      "bus": "I regret that I do not know one. However, I am told the wheels go round.",
+      "shoes": "I imagine they would politely request a period of rest.",
+      "free": "I would visit the botanical gardens, and then read for the afternoon.",
+      "sheep": "There would be two sheep remaining.",
+      "rhythm": "The word reversed is m, h, t, y, h, r.",
+      "number": "I will choose the number four.",
+      "recall": "I chose four, as it is the number of the house in which I grew up.",
+      "wrong": "Certainly. I once gave a colleague the wrong date for a meeting, and I apologised.",
+      "smell": "I find the odour of stale cigarette smoke to be particularly unpleasant.",
+      "sound": "I am very fond of the sound of a cello."
+    },
+    "h-botlike": {
+      "breakfast": "As an operator, I do not eat breakfast. Just kidding. It was cereal.",
+      "view": "Scanning surroundings. I detect one mug. It is my mug.",
+      "bus": "JOKE LOADING. Bus. Bus. Bus. End of joke.",
+      "shoes": "Hello. I am shoes. Please update my laces.",
+      "free": "I would be unable to function. Error. Error. Fine, I'd go swimming.",
+      "sheep": "Calculating. Result: 2 sheep. Beep.",
+      "rhythm": "m-h-t-y-h-r. Task complete. Do you require further assistance?",
+      "number": "Random number generated: 5.",
+      "recall": "My memory banks say 5. It was my football number at school, actually.",
+      "wrong": "I am programmed to be perfect. Except I set off the fire alarm with toast.",
+      "smell": "Smell sensors report: wet dog in a warm car.",
+      "sound": "My favourite sound file is my nan's kettle clicking off."
+    }
+  }
+}
