@@ -28,7 +28,6 @@ test('the whole mission plays from the title to the case file', async ({ page })
 test('the reveal never claims sample text is real, and shows a machine’s instructions', async ({ page }) => {
   await page.goto(BUILT_FILE);
   await start(page);
-  await expect(page.getByRole('note')).toContainText('Sample text');
   await playShift(page);
   await expect(page.getByText('Human (sample)')).toBeVisible();
   await expect(page.getByText('Machine: a rules bot')).toBeVisible();

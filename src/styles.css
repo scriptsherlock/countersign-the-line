@@ -75,17 +75,18 @@ h1 { font: 400 1em/1 var(--display); }
 @keyframes wipe { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0); } }
 .dialogue { position: absolute; inset: 0; pointer-events: none; }
 .dialogue > * { pointer-events: auto; }
-.speaker-art { position: absolute; left: clamp(-1rem, 1vw, 2rem); bottom: -1rem; height: min(90%, 640px); aspect-ratio: 380 / 620; animation: slide 220ms var(--ease-out); }
+.speaker-art { position: absolute; left: clamp(-5rem, -3vw, 0rem); bottom: -1rem; height: min(100%, 960px, 78vw); aspect-ratio: 3 / 4; animation: slide 220ms var(--ease-out); }
 .speaker-art svg, .speaker-art img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
-.speaker-art.art-sparks { left: auto; right: clamp(1rem, 12vw, 11rem); bottom: 16rem; height: 180px; aspect-ratio: 1; }
-.speaker-art.art-warden, .speaker-art.art-sift, .speaker-art.art-ledger, .speaker-art.art-muse { left: clamp(1rem, 6vw, 6rem); aspect-ratio: 360 / 560; }
+.speaker-art.art-sparks { left: auto; right: clamp(1rem, 10vw, 10rem); bottom: 14rem; height: min(34%, 300px); aspect-ratio: 1; }
+.speaker-art.art-warden, .speaker-art.art-sift, .speaker-art.art-ledger, .speaker-art.art-muse { left: clamp(-2rem, 1vw, 2rem); }
 @keyframes slide { from { opacity: 0; transform: translateY(12px); } }
-.dialogue-box { position: absolute; left: clamp(1rem, 31vw, 30rem); right: clamp(1rem, 5vw, 5rem); bottom: 2rem; padding: 1.1rem 1.4rem; background: var(--void); border: 2px solid var(--ink); border-radius: 8px; box-shadow: 0 0 30px rgb(255 255 255 / .1); }
+.dialogue-box { position: absolute; left: clamp(1rem, 37vw, 44rem); right: clamp(1rem, 5vw, 5rem); bottom: 2rem; padding: 1.1rem 1.4rem; background: var(--void); border: 2px solid var(--ink); border-radius: 8px; box-shadow: 0 0 30px rgb(255 255 255 / .1); }
 .speaker { font: 400 1.25rem var(--display); margin-bottom: .2rem; }
 .line { font-size: 1.3125rem; line-height: 1.4; max-width: 62ch; margin-bottom: .9rem; }
-.poster { position: absolute; left: 58%; top: 7%; width: 11.5%; min-width: 96px; padding: 0; border: 0; background: none; cursor: pointer; rotate: 1.4deg; z-index: 1; }
+.poster { position: absolute; left: 56%; top: 6%; width: 14%; min-width: 120px; padding: 7px 7px 5px; border: 8px solid #2C1C0E; outline: 2px solid #FFBC3D; background: #FFF4E0; color: #2C1C0E; font: 400 clamp(.625rem, .85vw, .8125rem)/1.25 var(--display); cursor: pointer; rotate: 1deg; z-index: 1; box-shadow: 0 16px 30px rgb(4 7 26 / .75), 0 0 54px rgb(255 188 61 / .32); }
 .poster svg, .poster img { display: block; width: 100%; }
-.turing-card { position: absolute; left: 33%; top: 7%; width: 23%; min-width: 240px; padding: .8rem 1rem; background: var(--void); border: 2px solid var(--ink); border-radius: 6px; z-index: 2; font-size: 1rem; animation: slide 180ms var(--ease-out); }
+.poster-plate { display: block; margin-top: 5px; text-align: center; }
+.turing-card { position: absolute; left: 31%; top: 7%; width: 23%; min-width: 240px; padding: .8rem 1rem; background: var(--void); border: 2px solid var(--ink); border-radius: 6px; z-index: 2; font-size: 1rem; animation: slide 180ms var(--ease-out); }
 .turing-card small { color: var(--muted); }
 
 /* the case file */
@@ -199,12 +200,12 @@ mark.m-filter { background: var(--stamp); }
 .persona { padding: .5rem .7rem; width: 100%; background: var(--soft); border: 1px solid var(--rule); border-radius: 4px; font: 400 .9375rem/1.5 var(--mono); white-space: pre-wrap; }
 
 /* files, reports and the reveal */
-.file-card { position: absolute; left: clamp(1rem, 33vw, 32rem); right: clamp(1rem, 6vw, 6rem); top: 50%; translate: 0 -50%; max-width: 44rem; display: grid; gap: .7rem; justify-items: start; padding: 1.1rem 1.4rem; background: var(--void); border: 2px solid var(--ink); border-radius: 8px; }
+.file-card { position: absolute; left: clamp(1rem, 38vw, 44rem); right: clamp(1rem, 6vw, 6rem); top: 50%; translate: 0 -50%; max-width: 44rem; display: grid; gap: .7rem; justify-items: start; padding: 1.1rem 1.4rem; background: var(--void); border: 2px solid var(--ink); border-radius: 8px; }
 .file-card h2, .report h2, .splice h2 { font: 400 1.75rem/1.2 var(--display); }
 .file-card.centre { left: 50%; right: auto; width: min(36rem, 92%); translate: -50% -50%; justify-items: center; text-align: center; }
 .file-card .art-badge { width: 64px; height: 64px; }
 .rank-line { display: flex; gap: 1rem; align-items: center; }
-.report { position: absolute; left: clamp(1rem, 33vw, 32rem); right: clamp(1rem, 5vw, 5rem); top: 50%; translate: 0 -50%; display: grid; gap: .9rem; padding: 1.1rem 1.4rem; background: var(--void); border: 2px solid var(--ink); border-radius: 8px; }
+.report { position: absolute; left: clamp(1rem, 38vw, 44rem); right: clamp(1rem, 5vw, 5rem); top: 50%; translate: 0 -50%; display: grid; gap: .9rem; padding: 1.1rem 1.4rem; background: var(--void); border: 2px solid var(--ink); border-radius: 8px; }
 .report-cards { display: grid; gap: .6rem; }
 .evidence { min-height: 56px; padding: .6rem .9rem; border: 2px solid var(--rule); border-radius: 6px; background: var(--sheet); font: 400 1.0625rem/1.35 var(--body); text-align: left; cursor: pointer; transition: transform 120ms var(--ease-out), border-color 120ms ease; }
 .evidence:active { transform: scale(0.98); }
@@ -258,7 +259,6 @@ mark.m-filter { background: var(--stamp); }
 .bars span { width: 12px; border: 2px solid var(--accent); }
 .bars .on { background: var(--accent); }
 .rank { padding-left: 1rem; }
-.sample { flex: none; padding: .15rem 1rem; background: var(--mark); color: var(--mark-ink); font-size: .9375rem; font-weight: 700; }
 .room { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: .9rem; padding: .75rem 1rem; }
 .operators { min-height: 0; display: grid; grid-template-columns: repeat(var(--ops), minmax(0, 1fr)); gap: .9rem; }
 .operator { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; }
@@ -280,8 +280,8 @@ select { min-height: 44px; padding: 0 .5rem; border: 2px solid var(--rule); bord
 .btn-key:disabled { background: transparent; border-color: var(--rule); color: var(--muted); }
 .reveal-title { font: 400 1.125rem var(--display); color: var(--accent); }
 .desk { display: flex; flex-direction: column; overflow-y: auto; }
-.assistant { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: .6rem; align-items: center; padding: .55rem .8rem; border-bottom: 2px solid var(--accent); font-size: 1rem; line-height: 1.35; }
-.assistant-art { height: 96px; }
+.assistant { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: .6rem; align-items: center; padding: .55rem .8rem; border-bottom: 2px solid var(--accent); font-size: 1rem; line-height: 1.35; }
+.assistant-art { height: 132px; }
 .assistant-art img { display: block; height: 100%; width: 100%; object-fit: contain; object-position: bottom; }
 .desk .cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: .45rem; padding: .7rem .8rem; }
 .desk h2 { font: 400 1.25rem var(--display); }
@@ -292,9 +292,9 @@ select { min-height: 44px; padding: 0 .5rem; border: 2px solid var(--rule); bord
 @media (hover: hover) and (pointer: fine) { .question:hover:not(:disabled) { border-color: var(--accent); } }
 .note-speed { padding: 0 .8rem .6rem; }
 .turing { position: absolute; inset: 0; margin: auto; width: min(62rem, 94%); height: fit-content; max-height: 96%; overflow-y: auto; display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 1.4rem; align-items: start; padding: 1.1rem 1.4rem; background: rgb(12 19 64 / .92); border: 2px solid var(--accent); border-radius: 8px; }
-.turing figure { margin: 0; }
+.turing figure { margin: 0; padding: 7px 7px 5px; border: 8px solid #2C1C0E; outline: 2px solid #FFBC3D; background: #FFF4E0; box-shadow: 0 0 44px rgb(255 188 61 / .25); }
 .turing img { display: block; width: 100%; }
-.turing figcaption { font-size: .9375rem; color: var(--muted); margin-top: .3rem; }
+.turing figcaption { font-size: .875rem; line-height: 1.25; color: #2C1C0E; margin-top: .3rem; text-align: center; }
 .turing-text { display: grid; gap: .6rem; }
 .turing-text h2 { font: 400 1.5rem var(--display); color: var(--accent); }
 .file-card .static { text-align: left; }

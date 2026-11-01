@@ -3,7 +3,7 @@ import { artFor } from '../assets/art';
 import { CharacterPortrait, Button, Stamp } from '../components/ui';
 import { CLUES, QUESTIONS, questionById } from '../content/questions';
 import { SHIFTS } from '../content/shifts';
-import { SAMPLE_CONTENT, isHuman, replyOf, sourceOf, type VoiceId } from '../content/voices';
+import { isHuman, replyOf, sourceOf, type VoiceId } from '../content/voices';
 import type { Band } from '../engine/dialogue';
 import { allComplete, clueResult, newShift, outcomeLine, points, shift as reducer, type Mark, type OperatorResult, type ShiftResult, type Verdict } from '../engine/shift';
 
@@ -83,7 +83,6 @@ export function ShiftScreen({ index, band, rank, onDone }: { index: number; band
         <div className="bars" role="img" aria-label={`Signal: ${state.bars} of ${info.bars} bars left`}>{Array.from({ length: info.bars }, (_, i) => <span key={i} className={i < state.bars ? 'on' : ''} style={{ height: `${10 + i * 7}px` }} />)}</div>
         <div className="rank"><div><strong>{rank}</strong><span>Mission 02</span></div></div>
       </header>
-      {SAMPLE_CONTENT && <p className="sample" role="note">Sample text: real human and model replies aren’t in yet. Not for pupils.</p>}
       <main className="room" style={{ '--ops': voices.length } as React.CSSProperties}>
         <section className="operators" aria-label="Operators">
           {voices.map((voice, i) => <Operator key={voice} sign={info.signs[i]!} voice={voice} asked={state.asked} mark={state.marks[i]!} step={state.step} onMark={mark => dispatch({ type: 'mark', slot: i, mark })} />)}
