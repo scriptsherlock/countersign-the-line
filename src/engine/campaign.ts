@@ -23,6 +23,7 @@ export type CampaignEvent =
   | { type: 'shiftDone'; result: ShiftResult; last: boolean }
   | { type: 'verdict'; verdict: string }
   | { type: 'endCard'; card: string }
+  | { type: 'jumpShift'; shift: number }
   | { type: 'restart' };
 
 export const newCampaign = (): Campaign => ({ stage: 'title', shift: 0, band: 'standard', flags: [], carried: 0, results: [], verdict: null, endCard: null });
@@ -34,6 +35,7 @@ export function reduce(state: Campaign, event: CampaignEvent): Campaign {
     case 'shiftDone': return { ...state, results: [...state.results.filter(r => r.shift !== event.result.shift), event.result], stage: event.last ? 'lastTape' : 'interlude' };
     case 'verdict': return { ...state, verdict: event.verdict, stage: 'turing' };
     case 'endCard': return { ...state, endCard: event.card, stage: 'file' };
+    case 'jumpShift': return { ...newCampaign(), shift: event.shift, stage: 'shift' };
     case 'restart': return newCampaign();
     case 'next':
       switch (state.stage) {

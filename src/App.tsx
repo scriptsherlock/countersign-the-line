@@ -11,13 +11,16 @@ import { clearGame, loadGame, saveGame } from './engine/save';
 import { tally } from './engine/shift';
 import { ShiftScreen } from './mission/ShiftScreen';
 
+// Teachers and demos: add #unlock to the address to jump to any shift. Normal play is unchanged.
+const UNLOCK_ALL = /unlock/.test(location.hash);
+
 const STYLES: { band: Band; label: string; hint: string }[] = [
   { band: 'simple', label: 'Short and simple', hint: 'Years 4–6' },
   { band: 'standard', label: 'Standard', hint: 'Years 7–9' },
   { band: 'full', label: 'Full detail', hint: 'Years 10–13' },
 ];
 
-function Title({ onNew, onContinue, saved }: { onNew: (band: Band, carried: number) => void; onContinue: () => void; saved: boolean }) {
+function Title({ onNew, onContinue, onJump, saved }: { onNew: (band: Band, carried: number) => void; onContinue: () => void; onJump: (shift: number) => void; saved: boolean }) {
   const [choosing, setChoosing] = useState(false), [code, setCode] = useState(''), [carried, setCarried] = useState(0), [note, setNote] = useState('');
   const image = artFor('scene-title');
   const useCode = (e: FormEvent) => {
@@ -40,6 +43,14 @@ function Title({ onNew, onContinue, saved }: { onNew: (band: Band, carried: numb
           <div className="row">
             <Button variant="key" autoFocus onClick={() => setChoosing(true)}>New file</Button>
             {saved && <Button onClick={onContinue}>Continue</Button>}
+          </div>
+        )}
+        {UNLOCK_ALL && (
+          <div className="jump" role="group" aria-label="Jump to a shift">
+            <p className="jump-label">Jump to a shift</p>
+            <div className="row">
+              {SHIFTS.map((_, i) => <Button key={i} onClick={() => onJump(i)}>Shift {i + 1}</Button>)}
+            </div>
           </div>
         )}
         <details className="codebox">
@@ -110,7 +121,7 @@ export function App() {
 
   switch (state.stage) {
     case 'title':
-      return <Title saved={!!saved} onContinue={() => saved && dispatch({ type: 'continue', saved })} onNew={(band, carried) => { clearGame(); dispatch({ type: 'newFile', band, carried }); }} />;
+      return <Title saved={!!saved} onContinue={() => saved && dispatch({ type: 'continue', saved })} onNew={(band, carried) => { clearGame(); dispatch({ type: 'newFile', band, carried }); }} onJump={shift => { clearGame(); dispatch({ type: 'jumpShift', shift }); }} />;
     case 'opening':
       return <main className="full"><SceneStage scene={OPENING.scene}><DialogueBox script={OPENING} band={state.band} onDone={next} /></SceneStage></main>;
     case 'shift':

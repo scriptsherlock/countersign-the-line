@@ -305,3 +305,7 @@ select { min-height: 44px; padding: 0 .5rem; border: 2px solid var(--rule); bord
   .desk h2, .desk .cards > .dim, .desk .cards > p { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: reduce) { .reply, .reveal, .toggle button:active { animation: none; transform: none; } }
+
+.jump { margin-top: .9rem; }
+.jump-label { margin: 0 0 .4rem; font-weight: 700; }
+.jump .row { flex-wrap: wrap; }

@@ -73,3 +73,10 @@ test('progress survives a reload', async ({ page }) => {
   await page.getByRole('button', { name: 'Skip scene' }).click();
   await expect(page.getByText('Second shift: shift 2 of 5')).toBeVisible();
 });
+
+test('#unlock lets a teacher jump straight to any shift', async ({ page }) => {
+  await page.goto(`${BUILT_FILE}#unlock`);
+  await page.getByRole('button', { name: 'Shift 3' }).click();
+  await expect(page.getByRole('heading', { name: 'The Line', exact: true })).toBeVisible();
+  await expect(page.getByText(/shift 3 of 5/)).toBeVisible();
+});
